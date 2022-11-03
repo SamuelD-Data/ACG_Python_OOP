@@ -25,7 +25,6 @@ class Lead:
     def __ge__(self, other):
         return self.lead_score() >= other.lead_score()
 
-# 1 / (staff_size / estimated_revenue * (10 ** (digits_in_revenue - digits_in_staff_size)) * effort_factor)
     def lead_score(self):
         return 1 / (
             self.staff_size
