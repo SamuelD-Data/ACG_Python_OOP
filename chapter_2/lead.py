@@ -12,6 +12,8 @@ class Lead:
         self.effort_factor = effort_factor
 
 # setting instance methods for each comparison operator (==, !=, >, etc.)
+# i.e., I'm overwriting the existing method functionality and substituting with my own
+# e.g., instead of == comparing as normal, it will compare the lead score of each element that is passed to it
     def __eq__(self, other):
         return self.lead_score() == other.lead_score()
 
