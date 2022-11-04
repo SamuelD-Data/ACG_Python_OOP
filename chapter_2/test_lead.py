@@ -30,8 +30,10 @@ class TestLead(unittest.TestCase):
         self.assertEqual(self.bobs.lead_score(), 0.25)
         self.assertEqual(self.small.lead_score(), 0.25)
 
-# these 6 methods test each of the comparison methods
-# e.g., apple does not match bobs, etc.
+# these 6 methods test each of the comparison methods I've overwritten
+# e.g., apple's lead score does not match bob's, etc.
+# since I overwrote the comparison operators, they now run as I've programmed in the Lead.py file
+# e.g., self.lead_score == other.lead_score, etc. 
     def test_ne_operator(self):
         self.assertTrue(self.apple != self.bobs)
 
@@ -58,6 +60,6 @@ class TestLead(unittest.TestCase):
         leads = [self.small, self.apple, self.bobs]
         self.assertEqual(list(sorted(leads)), [self.apple, self.small, self.bobs])
 
-
+# tells Python to run all of the code inside this file
 if __name__ == "__main__":
     unittest.main()
